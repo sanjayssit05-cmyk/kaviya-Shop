@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f8f8f1" />
+    <meta
+      name="description"
+      content="Kaviya Sri Mart brings fresh groceries and everyday essentials to Dindigul, RM Colony."
+    />
+    <title>Kaviya Sri Mart — Fresh picks, every day</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="announcement">
+      Fresh picks, fair prices — <strong>free delivery over ₹499</strong>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Kaviya Sri Mart home">
+        <span class="brand-mark">KSM</span>
+        <span class="brand-copy">Kaviya Sri <span class="brand-light">Mart</span><small>FRESH PICKS, EVERY DAY</small></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu" aria-controls="headerMenu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="header-menu" id="headerMenu">
+        <div class="delivery-pill"><span>Delivering to <strong>Dindigul, RM Colony</strong></span></div>
+        <label class="search-box">
+          <input id="searchInput" type="search" placeholder="Search for fruits, milk, snacks..." aria-label="Search products" />
+          <kbd>CTRL K</kbd>
+        </label>
+        <nav class="mobile-nav" aria-label="Main navigation">
+          <a href="#shop">Shop products</a>
+          <a href="#businessTitle">Our business</a>
+          <a href="https://www.instagram.com/sh.zree/#" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </nav>
+      </div>
+      <div class="header-actions">
+        <button class="cart-button" id="cartButton" aria-label="Open shopping cart">
+          <span>My basket</span><b id="cartCount">0</b>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <video
+          class="hero-background-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&amp;fit=crop&amp;w=1600&amp;q=85"
+          aria-hidden="true"
+          tabindex="-1"
+        >
+          <source src="https://videos.pexels.com/video-files/3195394/3195394-hd_1920_1080_25fps.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-copy">
+          <span class="eyebrow">YOUR NEIGHBOURHOOD MARKET, ONLINE</span>
+          <h1>A little more<br />fresh in your <em>everyday.</em></h1>
+          <p>Good food starts with good choices. Shop the freshest local finds, picked with care and delivered with love.</p>
+          <div class="hero-buttons">
+            <a class="button button-dark" href="#shop">Shop fresh finds</a>
+            <div class="happy-shoppers"><span><strong>4.9/5</strong><small>from happy shoppers</small></span></div>
+          </div>
+          <div class="hero-note">Picked fresh every single morning</div>
+          <div class="live-clock" aria-label="Current local date and time">
+            <span class="live-indicator">LIVE</span>
+            <time id="liveDateTime" aria-live="off">Loading local time...</time>
+          </div>
+        </div>
+        <div class="hero-art" aria-label="Fresh vegetables and fruits">
+          <div class="hero-sticker">FRESH<br />IS A<br /><i>feeling</i></div>
+          <div class="hero-image"></div>
+          <div class="floating-note"><span><strong>Farm to table</strong><small>in under 24 hours</small></span></div>
+        </div>
+        <div class="hero-bottom"><span>FRESH FINDS</span><span>SCROLL TO EXPLORE</span><span>MADE FOR YOUR EVERYDAY</span></div>
+      </section>
+
+      <div class="fresh-ribbon" aria-label="Fresh from our market to your table">
+        <div class="fresh-ribbon-track" aria-hidden="true">
+          <span>GOOD FOOD, GOOD MOOD</span><i></i><span>FRESH FROM OUR MARKET</span><i></i><span>MADE FOR YOUR EVERYDAY</span><i></i>
+          <span>GOOD FOOD, GOOD MOOD</span><i></i><span>FRESH FROM OUR MARKET</span><i></i><span>MADE FOR YOUR EVERYDAY</span><i></i>
+        </div>
+      </div>
+
+      <section class="category-section section-wrap">
+        <div class="section-heading">
+          <div><span class="eyebrow">A GOOD PLACE TO START</span><h2>Shop by <em>aisle</em></h2></div>
+          <button class="text-link" id="allCategories">See all categories</button>
+        </div>
+        <div class="category-list" id="categoryList">
+          <div class="category-track" id="categoryTrack">
+            <button class="category-card active" data-category="All"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&amp;fit=crop&amp;w=320&amp;q=75" alt="" loading="eager" /><span>Everything</span></button>
+            <button class="category-card" data-category="Fruits"><img src="https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?auto=format&amp;fit=crop&amp;w=320&amp;q=75" alt="" loading="eager" /><span>Fruits</span></button>
+            <button class="category-card" data-category="Vegetables"><img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&amp;fit=crop&amp;w=320&amp;q=75" alt="" loading="eager" /><span>Veggies</span></button>
+            <button class="category-card" data-category="Dairy"><img src="https://images.unsplash.com/photo-1563636619-e9143da7973b?auto=format&amp;fit=crop&amp;w=320&amp;q=75" alt="" loading="eager" /><span>Dairy & eggs</span></button>
+            <button class="category-card" data-category="Bakery"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&amp;fit=crop&amp;w=320&amp;q=75" alt="" loading="eager" /><span>Bakery</span></button>
+            <button class="category-card" data-category="Pantry"><img src="https://images.unsplash.com/photo-1587049352851-8d4e89133924?auto=format&amp;fit=crop&amp;w=320&amp;q=75" alt="" loading="eager" /><span>Pantry</span></button>
+            <button class="category-card" data-category="Snacks"><img src="https://images.unsplash.com/photo-1578849278619-e73505e9610f?auto=format&amp;fit=crop&amp;w=320&amp;q=75" alt="" loading="eager" /><span>Snacks</span></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="products-section section-wrap" id="shop">
+        <div class="section-heading product-heading">
+          <div><span class="eyebrow">THE GOOD STUFF, RIGHT NOW</span><h2>Fresh <em>favourites</em></h2></div>
+          <div class="product-controls">
+            <span class="results-count" id="resultsCount"></span>
+            <label class="sort-select">Sort by <select id="sortSelect" aria-label="Sort products"><option value="featured">Featured</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option></select></label>
+          </div>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+        <div class="empty-state" id="emptyState" hidden><h3>No fresh finds here yet</h3><p>Try another search or browse a different aisle.</p></div>
+      </section>
+
+      <section class="promise-banner">
+        <div><span class="eyebrow">A LITTLE PROMISE FROM US</span><h2>Good food. <em>No funny business.</em></h2><p>We work with local growers and makers who care as much as you do.</p></div>
+        <a href="#shop" class="button button-light">Our kind of good</a>
+      </section>
+
+      <section class="instagram-section" aria-labelledby="instagramTitle">
+        <div class="instagram-copy">
+          <span class="eyebrow">A LITTLE MORE FRESH IN YOUR FEED</span>
+          <h2 id="instagramTitle">The good stuff<br />looks good <em>on you.</em></h2>
+          <p>Market moments, colourful finds and a little everyday inspiration. Come say hi.</p>
+          <a class="instagram-link" href="https://www.instagram.com/sh.zree/#" target="_blank" rel="noopener noreferrer" aria-label="Open the Kaviya Sri Mart Instagram profile @sh.zree">
+            <span>Follow along <strong>@sh.zree</strong></span>
+          </a>
+        </div>
+        <div class="instagram-gallery" aria-label="Fresh market photo gallery">
+          <a class="instagram-tile instagram-tile-tall" href="https://www.instagram.com/sh.zree/#" target="_blank" rel="noopener noreferrer" aria-label="Visit Instagram to see fresh market inspiration">
+            <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="Colourful fresh produce at a market" loading="lazy" />
+            <span>MARKET FRESH</span>
+          </a>
+          <a class="instagram-tile" href="https://www.instagram.com/sh.zree/#" target="_blank" rel="noopener noreferrer" aria-label="Visit Instagram to see seasonal fruit inspiration">
+            <img src="https://images.unsplash.com/photo-1464965911861-746a04b4bca6?auto=format&amp;fit=crop&amp;w=500&amp;q=85" alt="Fresh strawberries ready to enjoy" loading="lazy" />
+            <span>IN SEASON</span>
+          </a>
+          <a class="instagram-tile" href="https://www.instagram.com/sh.zree/#" target="_blank" rel="noopener noreferrer" aria-label="Visit Instagram to see local grocery inspiration">
+            <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&amp;fit=crop&amp;w=500&amp;q=85" alt="A bowl of colourful fresh greens" loading="lazy" />
+            <span>GOOD GREENS</span>
+          </a>
+        </div>
+
+      </section>
+
+      <section class="newsletter section-wrap">
+        <div><span class="eyebrow">A FRESH LITTLE NOTE</span><h2>Good things in your inbox.</h2><p>Fresh picks, seasonal recipes & little surprises. No spam, promise.</p></div>
+        <form id="newsletterForm" class="newsletter-form"><label class="sr-only" for="emailInput">Your email address</label><input id="emailInput" type="email" placeholder="Your email address" required /><button type="submit">Count me in</button></form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <section class="business-section" aria-labelledby="businessTitle">
+        <div class="business-heading">
+          <span class="eyebrow">MORE FROM OUR FAMILY</span>
+          <h2 id="businessTitle">Our <em>business</em></h2>
+        </div>
+        <div class="business-grid">
+          <article class="business-card">
+            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&amp;fit=crop&amp;w=800&amp;q=85" alt="Elegant gold jewellery arranged for display in a jewellery shop" loading="lazy" />
+            <div><span>OUR CRAFT</span><h3>Jewellery Shop</h3></div>
+          </article>
+          <article class="business-card">
+            <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&amp;fit=crop&amp;w=800&amp;q=85" alt="Fresh produce in our supermarket" loading="lazy" />
+            <div><span>FRESH EVERY DAY</span><h3>Supermarket</h3></div>
+          </article>
+          <article class="business-card">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&amp;fit=crop&amp;w=800&amp;q=85" alt="Modern gym with fitness equipment" loading="lazy" />
+            <div><span>MOVE WITH PURPOSE</span><h3>Gym</h3></div>
+          </article>
+        </div>
+      </section>
+      <a class="whatsapp-bottom-cta" href="https://wa.me/919943376885?text=Hi%20Kaviya%20Sri%20Mart%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener noreferrer">
+        <span><strong>Need anything fresh?</strong><small>Message Kaviya Sri Mart on WhatsApp</small></span>
+        <b>Chat with us</b>
+      </a>
+      <div class="footer-bottom">
+        <a class="brand footer-brand" href="#"><span class="brand-mark">KSM</span><span class="brand-copy">Kaviya Sri <span class="brand-light">Mart</span><small>FRESH PICKS, EVERY DAY</small></span></a>
+        <span class="owner-credit">Owner: Kaviya Sri, B.Com CA <span>·</span> © 2026 Kaviya Sri Mart</span>
+        <div class="footer-socials"><a href="https://wa.me/919943376885?text=Hi%20Kaviya%20Mart%2C%20I%20would%20like%20to%20know%20more." target="_blank" rel="noopener noreferrer">WhatsApp</a><a href="https://www.instagram.com/sh.zree/#" target="_blank" rel="noopener noreferrer">Instagram</a></div>
+      </div>
+    </footer>
+
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+    <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping basket" aria-hidden="true">
+      <div class="drawer-header"><div><span class="eyebrow">YOUR GOODIES</span><h2>My basket <span id="drawerItemCount">(0)</span></h2></div><button class="close-drawer" id="closeDrawer" aria-label="Close basket">Close</button></div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-empty" id="cartEmpty"><h3>Your basket is taking a nap</h3><p>Add something fresh to wake it up.</p><button class="button button-dark" id="continueShopping">Keep shopping</button></div>
+      <div class="cart-footer" id="cartFooter">
+        <div class="delivery-progress"><span id="deliveryMessage">You're ₹499 away from free delivery</span><div><i id="deliveryProgress"></i></div></div>
+        <div class="subtotal"><span>Subtotal</span><strong id="cartSubtotal">₹0</strong></div>
+        <form class="customer-order-form" id="customerOrderForm">
+          <h3>Delivery details</h3>
+          <label for="customerName">Your name</label>
+          <input id="customerName" name="customerName" type="text" autocomplete="name" placeholder="Enter your name" required maxlength="80" />
+          <label for="customerPhone">Mobile number</label>
+          <input id="customerPhone" name="customerPhone" type="tel" autocomplete="tel" inputmode="tel" placeholder="e.g. 98765 43210" pattern="(?:\+?91[\s-]?)?[6-9][0-9]{9}" title="Enter a valid Indian mobile number" required maxlength="18" />
+          <label for="customerAddress">Delivery address</label>
+          <textarea id="customerAddress" name="customerAddress" autocomplete="street-address" rows="2" required maxlength="240">RM Colony, Dindigul</textarea>
+          <button class="button button-dark checkout-button" id="checkoutButton" type="submit">Submit order on WhatsApp</button>
+        </form>
+        <small>Your order and contact details will be shared with Kaviya Sri Mart on WhatsApp.</small>
+      </div>
+    </aside>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <a class="contact-button contact-float" href="https://wa.me/919943376885?text=Hi%20Kaviya%20Mart%2C%20I%20would%20like%20to%20know%20more." target="_blank" rel="noopener noreferrer" aria-label="Chat with Kaviya Mart on WhatsApp at 91 99433 76885">
+      <span>Chat with us</span>
+    </a>
+  </body>
+</html>
