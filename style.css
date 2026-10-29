@@ -49,7 +49,6 @@ kbd { flex: 0 0 auto; padding: 3px 5px; border: 1px solid #e8e7df; border-radius
 .cart-button:hover, .contact-button:hover { border-color: var(--green); transform: translateY(-2px); }
 .contact-float:hover { border-color: transparent; }
 .hero { position: relative; display: grid; grid-template-columns: 1fr 1fr; align-items: center; min-height: 540px; padding: 60px 10vw 84px; overflow: hidden; isolation: isolate; background: radial-gradient(ellipse at 92% 9%,rgba(255,195,118,.25),transparent 32%),linear-gradient(120deg,#fff3df 0%,#f6f3df 55%,#e7f0d7 100%); }
-.hero-background-video { position: absolute; z-index: -2; inset: 12px; width: calc(100% - 24px); height: calc(100% - 24px); border: 1px solid rgba(255,255,255,.55); border-radius: 30px; object-fit: cover; opacity: .45; }
 .hero::after { position: absolute; z-index: -1; inset: 12px; border-radius: 30px; background: linear-gradient(90deg,rgba(255,248,232,.84),rgba(255,248,232,.66) 48%,rgba(237,245,219,.4)),linear-gradient(0deg,rgba(36,67,44,.12),transparent 48%); content: ""; pointer-events: none; }
 .hero::before { position: absolute; top: -180px; left: -170px; width: 420px; height: 420px; border: 1px solid rgba(82,103,63,.1); border-radius: 50%; content: ""; }
 .hero-copy { position: relative; z-index: 1; max-width: 510px; animation: intro-up .8s both; }
