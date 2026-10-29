@@ -178,10 +178,12 @@ h1 em, h2 em { color: #62804b; font-weight: 600; }
 .business-card { position: relative; min-height: 170px; overflow: hidden; border-radius: 7px; background: #e8eadf; }
 .business-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .45s ease; }
 .business-card:hover img { transform: scale(1.06); }
+.business-card:focus-visible { outline: 3px solid #62804b; outline-offset: 3px; }
 .business-card::after { position: absolute; inset: 25% 0 0; background: linear-gradient(transparent,rgba(17,30,20,.78)); content: ""; }
 .business-card > div { position: absolute; z-index: 1; right: 15px; bottom: 14px; left: 15px; color: white; }
 .business-card > div span { color: #d7ed91; font-size: 8px; font-weight: 700; letter-spacing: .14em; }
 .business-card h3 { margin: 5px 0 0; font-family: var(--serif); font-size: 20px; font-weight: 600; }
+.business-card > div .business-card-action { display: inline-block; margin-top: 8px; padding: 5px 9px; border: 1px solid rgba(255,255,255,.55); border-radius: 4px; color: white; font-size: 9px; letter-spacing: .04em; }
 .whatsapp-bottom-cta { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin: 0 0 24px; padding: 16px 19px; border: 1px solid #cde7cc; border-radius: 12px; background: linear-gradient(110deg,#edf8e8,#fff9df); color: #285d43; transition: transform .2s, box-shadow .2s; }
 .whatsapp-bottom-cta:hover { transform: translateY(-2px); box-shadow: 0 9px 22px rgba(37,84,62,.12); }
 .whatsapp-bottom-cta strong, .whatsapp-bottom-cta small { display: block; }
